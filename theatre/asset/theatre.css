@@ -1,0 +1,99 @@
+body{
+	box-sizing: border-box;
+	position:fixed;
+	width:100%;
+	height:100%;
+	background-color:white;
+	border: 10px solid black;
+
+}
+.objet{
+	position:absolute;
+	display:block;
+}
+#lampe{	
+	background-image:url(objet/lampe.png);
+	width:150px;
+	height:206px;
+	top:55%;
+	left:65%;
+}
+#play{
+	background-image:url(objet/chandelier.png);
+	width:100px;
+	height:140px;
+	top:15%;
+	left:75%;
+}
+
+#cafetiere{
+	background-image:url(objet/cafetiere.png);
+	width:100px;
+	height:120px;
+	top:35%;
+	left:15%;
+}
+#chaussure{
+	background-image:url(objet/chaussure.png);
+	width:150px;
+	height:60px;
+	top:10%;
+	left:10%;	
+}
+
+
+#chaise{
+	background-image:url(objet/chaise.png);
+	width:120px;
+	height:120px;
+	top:5%;
+	left:45%;
+}
+#lit{
+	background-image:url(objet/lit.png);
+	width:160px;
+	height:90px;
+	top:80%;
+	left:20%;
+}
+#ombrelle{
+	background-image:url(objet/ombrelle.png);
+	width:65px;
+	height:90px;
+	top:75%;
+	left:5%;
+}
+
+#phono{
+	background-image:url(objet/phono.png);
+	width:175px;
+	height:165px;
+	top:39%;
+	left:80%;
+}
+
+
+
+
+video {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	z-index: 1;
+	width:20%;
+	margin-top:15%;
+	background-color:black;
+
+}
+
+#playlist {
+    display:table;
+}
+#playlist li{
+    cursor:pointer;
+}
+
+
+li{
+	list-style-type:none;
+}
