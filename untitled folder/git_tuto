@@ -1,0 +1,4 @@
+git pull   							   => pour télécharger le code depuis github
+git add .  						       => permet d'ajouter les fichier dans ton commit
+git commit -m "explication du commit"  => un commit c'est quand tu ajoutes une petite fonctionnalité au projet genre ajouter 									       une page sur le site
+git push							   => pour envoyer ton commit sur github
