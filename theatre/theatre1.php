@@ -5,38 +5,39 @@
 		
 
 	<body>
-		<a href="index.html">acceuil</a>
-		<video id="videoarea" controls="controls" poster="" src=""></video>
+		<?php include 'accueil.php';?>
+			
+		<video id="videoarea" poster="" src=""></video>
 
 		<ul id="playlist">
-		    <li movieurl="video/demo.mp4"> <button class="objet" id="play" > </button> </li>
-		    <li movieurl="video/demo.mp4"> <button class="objet" id="lampe" > </button> </li>          
-		    <li movieurl="video/demo.mp4"> <button class="objet" id="chaussure" > </button></li>   
-		    <li movieurl="video/demo.mp4"> <button class="objet" id="cafetiere" > </button></li> 
-		    <li movieurl="video/demo.mp4"> <button class="objet" id="chaise" > </button></li> 
-		    <li movieurl="video/demo.mp4"> <button class="objet" id="lit" > </button></li> 
-		    <li movieurl="video/demo.mp4"> <button class="objet" id="ombrelle" > </button></li> 
-		     <li movieurl="video/demo.mp4"> <button class="objet" id="phono" > </button></li>    
+		    <li movieurl="video/demo.mp4"> <button   class="objet" id="chandelier" class="play" > </button> </li>
+		    <li movieurl="video/demo.mp4"> <button   class="objet" id="lampe" class="play" > </button> </li>          
+		    <li movieurl="video/demo.mp4"> <button   class="objet" id="chaussure" class="play" > </button></li>   
+		    <li movieurl="video/demo.mp4"> <button   class="objet" id="cafetiere" class="play" > </button></li> 
+		    <li movieurl="video/demo.mp4"> <button   class="objet" id="chaise" class="play" > </button></li> 
+		    <li movieurl="video/demo.mp4"> <button   class="objet" id="ombrelle" class="play" > </button></li> 
+		     <li movieurl="video/demo.mp4"> <button  class="objet" id="phono" class="play" > </button></li>    
 		</ul>
-
+		<button onclick="playPause()">Play/Pause</button> 
 	</body>
+			<script>
+				var myVideo = document.getElementById("videoarea"); 
 
-	<script>
-
-		$(function() {
-		    $("#playlist li").on("click", function() {
-		        $("#videoarea").attr({
-		            "src": $(this).attr("movieurl"),
-		            "poster": "",
-		            "autoplay": "autoplay"
-		        })
-		    })
-		    $("#videoarea").attr({
-		        "src": $("#playlist li").eq(0).attr("movieurl"),
-		        "poster": $("#playlist li").eq(0).attr("moviesposter")
-		    })
-		});
-	</script>
-
-
+			function playPause() { 
+			    if (myVideo.paused) 
+			        myVideo.play(); 
+			    else 
+			        myVideo.pause(); 
+			} 
+/*			//video cachée au démarage, theatre1.php
+			$("video").hide();
+			$(".objet").click(function(){
+		    $("video").show();
+			});*/
+		/*la fenetre video disparait lorsqu'il y a un bouton sonore
+		$("#lit").click(function(){
+		    $("video").hide();
+		});*/
+		</script>
+		<script type= "text/javascript" src="video1.js"></script>
 </html>
