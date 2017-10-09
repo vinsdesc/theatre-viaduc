@@ -5,7 +5,7 @@
 		
 
 	<body>
-		<a href="index.php">acceuil</a>
+		<a href="index.html">acceuil</a>
 		<video id="videoarea" controls="controls" poster="" src=""></video>
 
 		<ul id="playlist">

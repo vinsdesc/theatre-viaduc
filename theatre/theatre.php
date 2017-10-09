@@ -1,20 +1,31 @@
+
 <?php
-include 'head.php';
 try
 {
-	$bdd = new PDO('mysql:host=localhost;dbname=theatre_viaduc;charset=utf8', 'root', '');
+	$bdd = new PDO('mysql:host=localhost;dbname=theatre_viaduc;charset=utf8', 'root', 'ZcKM9sCnt1mvwd9U');
 }
 catch(Exception $e)
 {
         die('Erreur : '.$e->getMessage());
-}
+}/*
+    $host_name  = "delfcomxepun.mysql.db";
+    $database   = "delfcomxepun";
+    $user_name  = "delfcomxepun";
+    $password   = "Bellante06";
+//var_dump($dsn);
+try {
+  $bdd = new PDO('mysql:host='.$host_name.';dbname='.$database, $user_name, $password);
+} catch (PDOException $e) {
+  print "Erreur !: " . $e->getMessage() . "<br/>";
+  die();
+}*/
 
 
-$reponse = $bdd->query('SELECT nom_capsule FROM capsules_sonores ORDER BY nom_capsule ASC');
+$reponse = $bdd->query('SELECT nom_capsule FROM capsules_sonores ORDER BY id DESC');
 
 if(isset($_GET['q']) AND !empty($_GET['q'])) {
 	$q = htmlspecialchars($_GET['q']);
-	$reponse = $bdd->query('SELECT nom_capsule FROM capsules_sonores WHERE commentaires LIKE "%'.$q.'%" ORDER BY id DESC');
+	$reponse = $bdd->query('SELECT nom_capsule FROM capsules_sonores WHERE nom_capsule LIKE "%'.$q.'%" ORDER BY id DESC');
   //var_dump($reponse);
 	if($reponse->rowCount() == 0) {
 		$reponse = $bdd->query('SELECT nom_capsule FROM capsules_sonores WHERE concat(nom_capsule, intervenant, titres_pieces, auteur_piece, metteur_en_scene, acteurs, musiciens, plasticiens, regisseurs, danseurs, commentaires) LIKE "%'.$q.'%" ORDER BY id DESC');
@@ -25,7 +36,7 @@ if(isset($_GET['q']) AND !empty($_GET['q'])) {
 echo 
 '<a href="index.html">acceuil</a>
 <form method="GET">
-   <input type="search" name="q" placeholder="Recherche..." id="recherche" />
+   <input type="search" name="q" placeholder="Recherche..." />
    <input type="submit" value="Rechercher" /> 
 </form>';
 
@@ -50,20 +61,3 @@ $b = $musique->fetch();
  } else { ?>
 Aucun résultat pour: <?= $q ?>...
 <?php } ?>
-
-<?= '<script language="JavaScript" type="text/javascript">
-  $(document).ready(function() {
-    var liste = [
-      "Draggable",
-      "Droppable",
-      "Resizable",
-      "Selectable",
-      "Sortable"
-  ];
-  $(\'#recherche\').autocomplete({
-      source : liste
-  });
-  });
-      </script>' ?>
-
-
