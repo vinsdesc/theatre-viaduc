@@ -17,15 +17,33 @@
 
 		<ul id="playlist">
 		    <li movieurl="video/demo.mp4"> 
-		    	<button   class="objet" id="chandelier" > </button> 
-				<p style="display: none" id="chandelier1">lalalaalal</p>
+		    	<button   class="objet chandelier_toggle" id="chandelier" > </button> 
+				<p style="display: none" class="objet chandelier_toggle text_toggle">lalalaalal</p>
 		    </li>
-		    <li movieurl="video/demo.mp4"> <button   class="objet" id="lampe" > </button> </li>          
-		    <li movieurl="video/demo.mp4"> <button   class="objet" id="chaussure" > </button></li>   
-		    <li movieurl="video/demo.mp4"> <button   class="objet" id="cafetiere" > </button></li> 
-		    <li movieurl="video/demo.mp4"> <button   class="objet" id="chaise" > </button></li> 
-		    <li movieurl="video/demo.mp4"> <button   class="objet" id="ombrelle" > </button></li> 
-		    <li movieurl="video/demo.mp4"> <button  class="objet" id="phono" > </button></li>    
+		    <li movieurl="video/demo.mp4"> 
+		    	<button   class="objet lampe_toggle" id="cle" ></button>
+		    	<p style="display: none" class="objet cle_toggle text_toggle">lalalaalal</p>
+		    </li>          
+		    <li movieurl="video/demo.mp4"> 
+		    	<button   class="objet chaussure_toggle" id="chaussure" > </button>
+		    	<p style="display: none" class="objet chaussure_toggle text_toggle">lalalaalal</p>
+		    </li>   
+		    <li movieurl="video/demo.mp4"> 
+		    	<button   class="objet cafetiere_toggle" id="cafetiere" > </button>
+		    	<p style="display: none" class="objet cafetiere_toggle text_toggle">lalalaalal</p>
+		    </li> 
+		    <li movieurl="video/demo.mp4"> 
+		    	<button   class="objet chaise_toggle" id="chaise" > </button>
+		    	<p style="display: none" class="objet chaise_toggle text_toggle">lalalaalal</p>
+		    </li> 
+		    <li movieurl="video/demo.mp4"> 
+		    	<button   class="objet ombrelle_toggle" id="ombrelle" > </button>
+		    	<p style="display: none" class="objet ombrelle_toggle text_toggle">lalalaalal</p>
+		    </li> 
+		    <li movieurl="video/demo.mp4"> 
+		    	<button  class="objet phono_toggle" id="phono" > </button>
+		    	<p style="display: none" class="objet phono_toggle text_toggle">lalalaalal</p>
+		    </li>    
 		</ul>
 		<button type="button" id="play" class="btn btn-secondary" onclick="playPause()">play</button>
 
