@@ -12,39 +12,9 @@
 	  		<button type="button" id="oeil" class="btn btn-primary">oeil</button>
 		</div>
 		
-
-		<video id="videoarea" poster="" src=""></video>
-
-		<ul id="playlist">
-		    <li movieurl="video/demo.mp4"> 
-		    	<button   class="objet chandelier_toggle" id="chandelier" > </button> 
-				<p style="display: none" class="objet chandelier_toggle text_toggle">lalalaalal</p>
-		    </li>
-		    <li movieurl="video/demo.mp4"> 
-		    	<button   class="objet lampe_toggle" id="cle" ></button>
-		    	<p style="display: none" class="objet cle_toggle text_toggle">lalalaalal</p>
-		    </li>          
-		    <li movieurl="video/demo.mp4"> 
-		    	<button   class="objet chaussure_toggle" id="chaussure" > </button>
-		    	<p style="display: none" class="objet chaussure_toggle text_toggle">lalalaalal</p>
-		    </li>   
-		    <li movieurl="video/demo.mp4"> 
-		    	<button   class="objet cafetiere_toggle" id="cafetiere" > </button>
-		    	<p style="display: none" class="objet cafetiere_toggle text_toggle">lalalaalal</p>
-		    </li> 
-		    <li movieurl="video/demo.mp4"> 
-		    	<button   class="objet chaise_toggle" id="chaise" > </button>
-		    	<p style="display: none" class="objet chaise_toggle text_toggle">lalalaalal</p>
-		    </li> 
-		    <li movieurl="video/demo.mp4"> 
-		    	<button   class="objet ombrelle_toggle" id="ombrelle" > </button>
-		    	<p style="display: none" class="objet ombrelle_toggle text_toggle">lalalaalal</p>
-		    </li> 
-		    <li movieurl="video/demo.mp4"> 
-		    	<button  class="objet phono_toggle" id="phono" > </button>
-		    	<p style="display: none" class="objet phono_toggle text_toggle">lalalaalal</p>
-		    </li>    
-		</ul>
+		<?php include 'video/video.php';?>
+		<?php include 'audio/audio.php';?>
+		
 		<button type="button" id="play" class="btn btn-secondary" onclick="playPause()">play</button>
 
 	</body>
@@ -55,10 +25,16 @@
 			$(".objet").click(function(){
 		    $("video").show();
 			});
-		/*la fenetre video disparait lorsqu'il y a un bouton sonore
-		$("#lit").click(function(){
+		//la fenetre video disparait lorsqu'il y a un bouton sonore
+		$(".chandelier_toggle").click(function(){
 		    $("video").hide();
-		});*/
+		});
+		$(".cle_toggle").click(function(){
+		    $("video").hide();
+		});
+		$(".chaussure_toggle").click(function(){
+		    $("video").hide();
+		});
 		</script>
-		<script type= "text/javascript" src="video1.js"></script>
+		<script type= "text/javascript" src="video/video1.js"></script>
 </html>

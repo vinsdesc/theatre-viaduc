@@ -2,8 +2,6 @@
 		<meta charset="UTF-8">
 		<title> theatreviaduc </title>
 
-		
-
 		<script
 		  src="https://code.jquery.com/jquery-3.2.1.min.js"
 		  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
@@ -15,17 +13,7 @@
 		  crossorigin="anonymous">
 		</script>
 
-		<script>
-			//video cachée au démarage, theatre1.php
-			$("video").hide();
-			$(".objet").click(function(){
-		    $("video").show();
-			});
-		/*la fenetre video disparait lorsqu'il y a un bouton sonore
-		$("#lit").click(function(){
-		    $("video").hide();
-		});*/
-		</script>
+
 
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
 
